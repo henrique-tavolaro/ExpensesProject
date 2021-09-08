@@ -1,5 +1,6 @@
 package com.example.expensesproject.domain.model
 
+import android.text.Editable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -14,9 +15,9 @@ data class Expense(
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name = "category")
-    val category: Category,
+    val category: String,
     @ColumnInfo(name = "value")
-    val value: Double,
+    val value: String,
     @ColumnInfo(name = "date")
     val date: Date
 

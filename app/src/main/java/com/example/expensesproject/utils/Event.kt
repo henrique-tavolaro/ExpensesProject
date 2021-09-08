@@ -1,4 +1,4 @@
-package com.example.expensesproject.datasource.utils
+package com.example.expensesproject.utils
 
 
 open class Event<out T>(private val content: T) {

@@ -2,7 +2,7 @@ package com.example.expensesproject.domain.model
 
 enum class Category {
     HOME,
-    GROCERY,
+    FOOD,
     EDUCATION,
     ENTERTAINMENT,
     HEALTH,

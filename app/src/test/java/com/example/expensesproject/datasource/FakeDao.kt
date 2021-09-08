@@ -5,11 +5,10 @@ import com.example.expensesproject.domain.model.Category
 import com.example.expensesproject.domain.model.Expense
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import java.time.LocalDate
 import java.util.*
 
 val expense1 = Expense(1, "rent", Category.HOME, 1000.0, Date())
-val expense2 = Expense(2, "food", Category.GROCERY, 20.0, Date())
+val expense2 = Expense(2, "food", Category.FOOD, 20.0, Date())
 
 class FakeDao(
     val expenseList: MutableList<Expense> = mutableListOf()

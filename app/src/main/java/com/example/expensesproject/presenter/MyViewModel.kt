@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.expensesproject.datasource.utils.Event
+import com.example.expensesproject.utils.Event
 import com.example.expensesproject.domain.model.Expense
 import com.example.expensesproject.domain.repositories.MyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,6 +21,10 @@ class MyViewModel @Inject constructor(
 
     private val _allExpenses : MutableLiveData<Event<List<Expense>>> = MutableLiveData()
     val allExpenses : LiveData<Event<List<Expense>>> = _allExpenses
+
+    init {
+        getAllExpenses()
+    }
 
     fun getAllExpenses(){
         viewModelScope.launch {
